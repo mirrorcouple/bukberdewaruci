@@ -22,17 +22,43 @@ body{font-family:'Nunito',sans-serif;overflow-x:hidden}
 @keyframes riseUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
 @keyframes twinkle{0%,100%{opacity:.3}50%{opacity:1}}
 @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+@keyframes floatUp{0%{transform:translateY(0)}50%{transform:translateY(-15px)}100%{transform:translateY(0)}}
+@keyframes floatDown{0%{transform:translateY(-20px)}50%{transform:translateY(0)}100%{transform:translateY(-20px)}}
 
 .animate-fade{animation:fadeIn 1s ease-out forwards}
 .animate-rise{animation:riseUp .8s ease-out forwards}
 .animate-twinkle{animation:twinkle 2s ease-in-out infinite}
 .animate-pulse-soft{animation:pulse 2s ease-in-out infinite}
+.animate-float{animation:floatUp 4s ease-in-out infinite}
+.animate-lentera-down{animation:floatDown 6s ease-in-out infinite;}
 
 .star{
 position:absolute;
 background:#ffd700;
 border-radius:50%;
 }
+
+.moon{
+position:absolute;
+top:5%;
+right:10%;
+width:60px;height:60px;
+background:radial-gradient(circle at 25% 25%,#fff,#f0e6d2);
+border-radius:50%;
+box-shadow:0 0 20px rgba(255,255,255,0.5);
+}
+
+.lantern{
+position:absolute;
+width:30px;height:50px;
+background:#e8c49a;
+border-radius:10px;
+box-shadow:0 0 10px #d4a574;
+}
+
+.lantern-1{top:20%;left:20%;animation:floatDown 6s ease-in-out infinite;}
+.lantern-2{top:25%;left:60%;animation:floatDown 7s ease-in-out infinite;}
+.lantern-3{top:30%;left:80%;animation:floatDown 8s ease-in-out infinite;}
 
 .section-hidden{display:none}
 
@@ -69,7 +95,6 @@ background:linear-gradient(180deg,#fef9f3 0%,#fff5eb 50%,#fef9f3 100%);
 
 <!-- ================== SECTION 1 OPENING ================== -->
 <section id="section-opening" class="min-h-screen bg-night relative flex flex-col items-center justify-center px-4 py-12 overflow-hidden">
-
 <!-- ⭐ Hiasan Bintang -->
 <div class="absolute inset-0 pointer-events-none">
 <div class="star w-1 h-1 top-[10%] left-[15%] animate-twinkle"></div>
@@ -77,6 +102,9 @@ background:linear-gradient(180deg,#fef9f3 0%,#fff5eb 50%,#fef9f3 100%);
 <div class="star w-1 h-1 top-[25%] left-[25%] animate-twinkle"></div>
 <div class="star w-1.5 h-1.5 top-[8%] left-[60%] animate-twinkle"></div>
 </div>
+
+<!-- 🌙 Bulan -->
+<div class="moon"></div>
 
 <div class="relative z-10 text-center animate-fade">
 <h1 class="font-display text-4xl md:text-6xl text-white mb-6">
@@ -89,6 +117,11 @@ TIM DEWA RUCI
 🌙 Buka Undangan
 </button>
 </div>
+
+<!-- 🏮 Lentera Animasi -->
+<div class="lantern lantern-1"></div>
+<div class="lantern lantern-2"></div>
+<div class="lantern lantern-3"></div>
 </section>
 
 <!-- ================== SECTION 2 ISI UNDANGAN ================== -->
@@ -151,6 +184,9 @@ Jangan sampai telat 😉✨
 <div class="star w-1 h-1 top-[25%] left-[85%] animate-twinkle"></div>
 </div>
 
+<!-- 🌙 Bulan -->
+<div class="moon"></div>
+
 <div class="relative z-10 max-w-4xl mx-auto">
 <h2 class="text-center text-3xl font-display text-white mb-12">
 🗓️ Rundown Acara
@@ -183,18 +219,36 @@ Jangan sampai telat 😉✨
 </section>
 
 <!-- ================== SECTION 4 PENUTUP ================== -->
-<section id="section-closing" class="section-hidden min-h-screen bg-cream flex flex-col items-center justify-center px-4 text-center">
+<section id="section-closing" class="section-hidden min-h-screen bg-night relative flex flex-col items-center justify-center px-4 text-center overflow-hidden">
 
-<p class="text-2xl font-semibold mb-6">
+<!-- ⭐ Hiasan Bintang -->
+<div class="absolute inset-0 pointer-events-none">
+<div class="star w-1 h-1 top-[15%] left-[10%] animate-twinkle"></div>
+<div class="star w-1 h-1 top-[25%] left-[70%] animate-twinkle"></div>
+<div class="star w-1.5 h-1.5 top-[5%] left-[50%] animate-twinkle"></div>
+</div>
+
+<!-- 🌙 Bulan -->
+<div class="moon"></div>
+
+<!-- 🏮 Lentera Animasi Bawah -->
+<div class="lantern lantern-1"></div>
+<div class="lantern lantern-2"></div>
+<div class="lantern lantern-3"></div>
+
+<p class="text-2xl font-semibold mb-6 text-white">
 Sampai jumpa di meja takjil terbaik tahun ini 🌟
 </p>
 
 <div id="countdown" class="text-[#d4a574] font-bold text-xl mb-6"></div>
 
-<p class="mb-10">
+<p class="mb-10 text-white">
 Kami berharap teman-teman bisa mengikuti acara ini sampai selesai yaa 🤍  
 Supaya kebersamaan kita makin hangat dan penuh cerita indah ✨
 </p>
+
+<!-- Gambar Kartun Orang Buka Puasa -->
+<img src="https://i.ibb.co/2sBxF9g/cartoon-buka-puasa.png" alt="Kartun Buka Puasa" class="w-64 md:w-80 mx-auto mb-6 animate-float">
 
 <button onclick="scrollToTop()" class="btn-open px-8 py-3 rounded-full text-white font-semibold">
 ↑ Kembali ke Atas
