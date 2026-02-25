@@ -64,21 +64,15 @@ body { font-family: 'Nunito', sans-serif; overflow-x: hidden; }
 
 <!-- SECTION 1 - OPENING -->
 <section id="section-opening" class="min-h-screen bg-night relative flex flex-col items-center justify-center px-4 py-12">
-  <!-- Stars -->
+  <!-- Stars, Moon, Lanterns -->
   <div class="absolute inset-0 overflow-hidden pointer-events-none">
     <div class="star w-1 h-1 top-[10%] left-[15%] animate-twinkle"></div>
     <div class="star w-2 h-2 top-[15%] left-[80%] animate-twinkle delay-200"></div>
     <div class="star w-1 h-1 top-[25%] left-[25%] animate-twinkle delay-300"></div>
     <div class="star w-1.5 h-1.5 top-[8%] left-[60%] animate-twinkle delay-100"></div>
     <div class="star w-1 h-1 top-[35%] left-[90%] animate-twinkle delay-400"></div>
-    <div class="star w-2 h-2 top-[20%] left-[45%] animate-twinkle delay-500"></div>
-    <div class="star w-1 h-1 top-[40%] left-[10%] animate-twinkle delay-200"></div>
-    <div class="star w-1.5 h-1.5 top-[5%] left-[35%] animate-twinkle delay-300"></div>
-    <div class="star w-1 h-1 top-[30%] left-[70%] animate-twinkle delay-100"></div>
-    <div class="star w-2 h-2 top-[45%] left-[55%] animate-twinkle delay-400"></div>
   </div>
 
-  <!-- Moon -->
   <div class="absolute top-8 right-8 md:top-12 md:right-16 animate-float">
     <svg width="80" height="80" viewBox="0 0 100 100"><defs>
       <linearGradient id="moonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -90,7 +84,6 @@ body { font-family: 'Nunito', sans-serif; overflow-x: hidden; }
     </svg>
   </div>
 
-  <!-- Lanterns -->
   <div class="absolute top-20 left-4 md:left-16 animate-float delay-200">
     <svg width="50" height="70" viewBox="0 0 50 70">
       <rect x="18" y="0" width="14" height="8" rx="2" fill="#d4a574"/>
@@ -99,82 +92,38 @@ body { font-family: 'Nunito', sans-serif; overflow-x: hidden; }
       <rect x="22" y="65" width="6" height="5" rx="1" fill="#d4a574"/>
     </svg>
   </div>
-  <div class="absolute top-32 right-4 md:right-32 animate-float delay-300">
-    <svg width="40" height="56" viewBox="0 0 50 70">
-      <rect x="18" y="0" width="14" height="8" rx="2" fill="#9db4a0"/>
-      <ellipse cx="25" cy="40" rx="20" ry="28" fill="#b8d4ba" opacity="0.9"/>
-      <ellipse cx="25" cy="40" rx="15" ry="22" fill="#d4e8d6" opacity="0.6"/>
-      <rect x="22" y="65" width="6" height="5" rx="1" fill="#9db4a0"/>
-    </svg>
-  </div>
 
   <!-- Main Content -->
   <div class="relative z-10 text-center animate-fade">
-    <div class="flex justify-center mb-6">
-      <svg width="60" height="30" viewBox="0 0 60 30">
-        <path d="M0 25 Q15 5 30 15 Q45 25 60 5" stroke="#d4a574" stroke-width="2" fill="none"/>
-      </svg>
-    </div>
-    <h1 id="main-title" class="font-display text-3xl md:text-5xl lg:text-6xl text-white mb-4 tracking-wide leading-tight">UNDANGAN<br>BUKA BERSAMA</h1>
-    <div class="flex items-center justify-center gap-3 mb-8">
-      <div class="w-12 h-0.5 bg-gradient-to-r from-transparent to-[#d4a574]"></div>
-      <span class="text-[#d4a574] text-xl">✦</span>
-      <div class="w-12 h-0.5 bg-gradient-to-l from-transparent to-[#d4a574]"></div>
-    </div>
-    <h2 id="team-name" class="text-xl md:text-2xl text-[#e8c49a] font-semibold tracking-widest mb-12">TIM DEWA RUCI</h2>
-
-    <!-- Open Button -->
+    <h1 class="font-display text-5xl text-white mb-4 tracking-wide leading-tight">UNDANGAN<br>BUKA BERSAMA</h1>
+    <h2 class="text-2xl text-[#e8c49a] font-semibold tracking-widest mb-12">TIM DEWA RUCI</h2>
     <button id="btn-open" onclick="openInvitation()" class="btn-open px-10 py-4 rounded-full text-white font-bold text-lg shadow-lg animate-pulse-soft">
       🌙 Buka Undangan
     </button>
-  </div>
-  <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/50 text-sm animate-bounce">
-    <span class="block text-center">↓</span>
   </div>
 </section>
 
 <!-- SECTION 2 - ISI UNDANGAN -->
 <section id="section-content" class="section-hidden min-h-screen bg-night relative px-4 py-16 md:py-20">
-  <!-- Background Stars -->
   <div class="absolute inset-0 overflow-hidden pointer-events-none">
     <div class="star w-1 h-1 top-[5%] left-[20%] animate-twinkle"></div>
     <div class="star w-1.5 h-1.5 top-[10%] left-[75%] animate-twinkle delay-200"></div>
-    <div class="star w-1 h-1 top-[25%] left-[85%] animate-twinkle delay-300"></div>
-    <div class="star w-2 h-2 top-[15%] left-[40%] animate-twinkle delay-100"></div>
-    <div class="star w-1 h-1 top-[35%] left-[15%] animate-twinkle delay-400"></div>
   </div>
-
   <div class="max-w-2xl mx-auto relative z-10">
     <div class="bg-white/95 backdrop-blur-sm rounded-3xl p-6 md:p-10 shadow-2xl animate-fade">
-      <div class="text-center mb-8">
-        <h2 class="text-2xl md:text-3xl font-bold text-[#4a4a4a] mb-2">🌙✨ BUKBER ALERT! ✨🌙</h2>
+      <h2 class="text-3xl font-bold text-[#4a4a4a] text-center mb-4">🌙✨ BUKBER ALERT! ✨🌙</h2>
+      <p class="text-center mb-4">Halo <span class="font-bold text-[#d4a574]">Tim Dewa Ruci</span> 🤍</p>
+      <p class="mb-4">Perut boleh kosong, tapi kebersamaan harus penuh! 😆 Siapkan mood dan outfit terbaik, karena momen ini bukan cuma soal makanan tapi juga tawa dan cerita lucu 😌</p>
+      <div class="bg-gradient-to-br from-[#fef9f3] to-[#fff5eb] rounded-2xl p-6 space-y-2 border border-[#e8c49a]/30">
+        <p class="font-bold text-xl text-center text-[#d4a574]">🍽️ Buka Bersama</p>
+        <p>📍 <strong>Tempat:</strong> Cafe Dewa Ruci</p>
+        <p>🗓️ <strong>Tanggal:</strong> Sabtu, 28 Februari 2026</p>
+        <p>🕥 <strong>Waktu:</strong> 16.00–17.30</p>
+        <p>👗 <strong>Dresscode:</strong> Yang terbaik — biar fotonya estetik semua 📸</p>
+        <p>🎁 *Doorprise untuk 7 orang pertama hadir!*</p>
       </div>
-
-      <div class="space-y-6 text-[#4a4a4a] text-base md:text-lg leading-relaxed">
-        <p class="text-center">Halo <span id="content-team" class="font-bold text-[#d4a574]">Tim Dewa Ruci</span> 🤍</p>
-        <p>Perut boleh kosong, tapi kebersamaan harus penuh! 😆</p>
-        <p>Kami resmi mengundang kalian untuk hadir di acara:</p>
-        <div class="bg-gradient-to-br from-[#fef9f3] to-[#fff5eb] rounded-2xl p-6 space-y-3 border border-[#e8c49a]/30">
-          <p class="font-bold text-xl text-center text-[#d4a574]">🍽️ Buka Bersama</p>
-          <div class="space-y-2 text-sm md:text-base">
-            <p>📍 <strong>Tempat:</strong> <span id="detail-location">Cafe Dewa Ruci</span></p>
-            <p>🗓️ <strong>Tanggal:</strong> <span id="detail-date">Sabtu, 28 Februari 2026</span></p>
-            <p>🕥 <strong>Waktu:</strong> <span id="detail-time">16.00–17.30</span></p>
-            <p>👗 <strong>Dresscode:</strong> <span id="detail-dresscode">Yang terbaik</span> — biar fotonya estetik semua 📸</p>
-            <p>🎁 *Doorprise untuk 7 orang pertama hadir!*</p>
-          </div>
-        </div>
-        <p>Siapkan outfit terbaik, mood terbaik, dan perut kosong maksimal karena momen ini bukan cuma soal makanan tapi juga soal tawa, cerita, dan foto-foto lucu 😌</p>
-      </div>
-
-      <div class="flex items-center justify-center gap-3 my-8">
-        <div class="w-16 h-0.5 bg-gradient-to-r from-transparent to-[#9db4a0]"></div>
-        <span class="text-[#9db4a0]">🌿</span>
-        <div class="w-16 h-0.5 bg-gradient-to-l from-transparent to-[#9db4a0]"></div>
-      </div>
-
-      <div class="text-center">
-        <button onclick="scrollToSection('section-rundown')" class="bg-gradient-to-r from-[#9db4a0] to-[#b8d4ba] px-8 py-3 rounded-full text-white font-semibold shadow-lg hover:shadow-xl transition-all hover:scale-105">
+      <div class="text-center mt-8">
+        <button onclick="scrollToSection('section-rundown')" class="bg-gradient-to-r from-[#9db4a0] to-[#b8d4ba] px-8 py-3 rounded-full text-white font-semibold shadow-lg hover:scale-105">
           Lihat Rundown ↓
         </button>
       </div>
@@ -187,14 +136,9 @@ body { font-family: 'Nunito', sans-serif; overflow-x: hidden; }
   <div class="absolute inset-0 overflow-hidden pointer-events-none">
     <div class="star w-1 h-1 top-[10%] left-[10%] animate-twinkle"></div>
     <div class="star w-1.5 h-1.5 top-[15%] left-[80%] animate-twinkle delay-200"></div>
-    <div class="star w-1 h-1 top-[25%] left-[30%] animate-twinkle delay-300"></div>
   </div>
-
   <div class="max-w-3xl mx-auto relative z-10">
-    <div class="text-center mb-10">
-      <h2 class="text-3xl font-display text-white font-bold">📅 Rundown Acara</h2>
-      <p class="text-[#d4a574]">Klik kartu untuk info detail</p>
-    </div>
+    <h2 class="text-3xl font-display text-white text-center font-bold mb-8">📅 Rundown Acara</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <div class="info-card rounded-2xl p-6 text-center shadow-lg animate-rise opacity-0 delay-100">
         <p class="text-2xl mb-2">⏰</p>
@@ -218,7 +162,7 @@ body { font-family: 'Nunito', sans-serif; overflow-x: hidden; }
       </div>
     </div>
     <div class="text-center mt-10">
-      <button onclick="scrollToSection('section-closing')" class="bg-gradient-to-r from-[#d4a574] to-[#e8c49a] px-8 py-3 rounded-full text-white font-semibold shadow-lg hover:shadow-xl transition-all hover:scale-105">
+      <button onclick="scrollToSection('section-closing')" class="bg-gradient-to-r from-[#d4a574] to-[#e8c49a] px-8 py-3 rounded-full text-white font-semibold shadow-lg hover:scale-105">
         Lihat Penutup ↓
       </button>
     </div>
@@ -227,6 +171,83 @@ body { font-family: 'Nunito', sans-serif; overflow-x: hidden; }
 
 <!-- SECTION 4 - PENUTUP -->
 <section id="section-closing" class="section-hidden min-h-screen bg-night relative px-4 py-16 md:py-20 flex flex-col items-center justify-center text-white">
-  <!-- Stars -->
   <div class="absolute inset-0 overflow-hidden pointer-events-none">
-    <div class="
+    <div class="star w-1 h-1 top-[5%] left-[25%] animate-twinkle"></div>
+    <div class="star w-1 h-1 top-[15%] left-[70%] animate-twinkle delay-200"></div>
+    <div class="star w-1 h-1 top-[30%] left-[50%] animate-twinkle delay-300"></div>
+  </div>
+
+  <!-- Lentera turun -->
+  <div class="absolute top-0 left-1/2 transform -translate-x-1/2 animate-float delay-100">
+    <img src="lantern.png" alt="lantern" class="w-14 h-20"/>
+  </div>
+
+  <!-- Countdown -->
+  <div class="mb-8 text-center">
+    <h2 class="text-3xl font-bold mb-4">⏳ Countdown Acara</h2>
+    <div id="countdown" class="text-4xl md:text-5xl font-display tracking-widest">00 Hari 00 Jam 00 Menit 00 Detik</div>
+  </div>
+
+  <!-- Gambar kartun lucu buka puasa -->
+  <img src="cartoon-buka-puasa.png" alt="Cartoon buka puasa" class="w-64 md:w-80 mb-8 animate-float"/>
+
+  <!-- Pesan penutup -->
+  <div class="bg-white/10 backdrop-blur-md rounded-3xl p-6 md:p-10 text-center max-w-2xl">
+    <p class="text-xl mb-4">Terima kasih sudah membuka undangan ini! 🌙✨</p>
+    <p class="text-lg">Kami sangat berharap <strong>semua hadir sampai acara selesai</strong> agar momen ini menjadi hangat dan meriah untuk kita semua 🤍</p>
+    <p class="mt-4 text-[#ffd700] font-semibold">🎁 Jangan lupa, doorprise untuk 7 orang pertama hadir masih menanti!</p>
+    <button onclick="scrollToTop()" class="mt-6 bg-gradient-to-r from-[#d4a574] to-[#e8c49a] px-8 py-3 rounded-full text-white font-semibold shadow-lg hover:scale-105">
+      ⬆️ Kembali ke Atas
+    </button>
+  </div>
+</section>
+
+<!-- Audio -->
+<audio id="bg-music" loop>
+  <source src="ramadan.mp3" type="audio/mpeg">
+</audio>
+<button id="btn-music" onclick="toggleMusic()" class="fixed top-4 right-4 z-50 bg-[#d4a574] px-4 py-2 rounded-full text-white shadow-lg hover:scale-105 transition-all">▶️</button>
+
+<script>
+  function openInvitation(){
+    document.getElementById('section-opening').classList.add('section-hidden');
+    document.getElementById('section-content').classList.remove('section-hidden');
+    document.getElementById('section-content').scrollIntoView({behavior:'smooth'});
+    playMusic();
+  }
+  function scrollToSection(id){ document.getElementById(id).scrollIntoView({behavior:'smooth'}); }
+  function scrollToTop(){ window.scrollTo({top:0, behavior:'smooth'}); }
+
+  const bgMusic = document.getElementById('bg-music');
+  const btnMusic = document.getElementById('btn-music');
+  function toggleMusic(){
+    if(bgMusic.paused){ bgMusic.play(); btnMusic.innerText='⏸️'; } 
+    else { bgMusic.pause(); btnMusic.innerText='▶️'; }
+  }
+  function playMusic(){ bgMusic.play(); btnMusic.innerText='⏸️'; }
+
+  // Countdown
+  const countdownElement = document.getElementById('countdown');
+  const eventDate = new Date("February 28, 2026 16:00:00").getTime();
+  setInterval(()=>{
+    const now = new Date().getTime();
+    const distance = eventDate - now;
+    const days = Math.floor(distance/(1000*60*60*24));
+    const hours = Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+    const minutes = Math.floor((distance%(1000*60*60))/(1000*60));
+    const seconds = Math.floor((distance%(1000*60))/1000);
+    countdownElement.innerText = `${days.toString().padStart(2,'0')} Hari ${hours.toString().padStart(2,'0')} Jam ${minutes.toString().padStart(2,'0')} Menit ${seconds.toString().padStart(2,'0')} Detik`;
+  }, 1000);
+
+  // Animate cards on scroll
+  const cards = document.querySelectorAll('.info-card');
+  const observer = new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){ entry.target.classList.add('opacity-100'); }
+    });
+  }, {threshold:0.3});
+  cards.forEach(card=>observer.observe(card));
+</script>
+</div>
+</body>
+</html>
