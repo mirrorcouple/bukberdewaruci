@@ -20,19 +20,21 @@ body{font-family:'Nunito',sans-serif;overflow-x:hidden}
 
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 @keyframes riseUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
-@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
 @keyframes twinkle{0%,100%{opacity:.3}50%{opacity:1}}
 @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
 
 .animate-fade{animation:fadeIn 1s ease-out forwards}
 .animate-rise{animation:riseUp .8s ease-out forwards}
-.animate-float{animation:float 3s ease-in-out infinite}
 .animate-twinkle{animation:twinkle 2s ease-in-out infinite}
 .animate-pulse-soft{animation:pulse 2s ease-in-out infinite}
 
-.star{position:absolute;background:#ffd700;border-radius:50%}
+.star{
+position:absolute;
+background:#ffd700;
+border-radius:50%;
+}
+
 .section-hidden{display:none}
-.section-visible{display:block}
 
 .info-card{
 background:rgba(255,255,255,.95);
@@ -54,12 +56,6 @@ transform:scale(1.05);
 box-shadow:0 10px 30px rgba(212,165,116,.4);
 }
 
-.main-wrapper{
-height:100%;
-overflow-y:auto;
-scroll-behavior:smooth;
-}
-
 .bg-night{
 background:linear-gradient(180deg,#1a1a2e 0%,#2d2d5a 30%,#3d3d6b 50%,#4a4a7d 70%,#5c5c8a 100%);
 }
@@ -70,67 +66,56 @@ background:linear-gradient(180deg,#fef9f3 0%,#fff5eb 50%,#fef9f3 100%);
 </head>
 
 <body class="h-full">
-<div id="app-wrapper" class="main-wrapper">
 
 <!-- ================== SECTION 1 OPENING ================== -->
-<section id="section-opening" class="min-h-screen bg-night relative flex flex-col items-center justify-center px-4 py-12">
+<section id="section-opening" class="min-h-screen bg-night relative flex flex-col items-center justify-center px-4 py-12 overflow-hidden">
+
+<!-- ⭐ Hiasan Bintang -->
+<div class="absolute inset-0 pointer-events-none">
+<div class="star w-1 h-1 top-[10%] left-[15%] animate-twinkle"></div>
+<div class="star w-2 h-2 top-[15%] left-[80%] animate-twinkle"></div>
+<div class="star w-1 h-1 top-[25%] left-[25%] animate-twinkle"></div>
+<div class="star w-1.5 h-1.5 top-[8%] left-[60%] animate-twinkle"></div>
+</div>
+
 <div class="relative z-10 text-center animate-fade">
-<h1 class="font-display text-4xl md:text-6xl text-white mb-6">UNDANGAN<br>BUKA BERSAMA</h1>
-<h2 class="text-xl text-[#e8c49a] mb-10 tracking-widest">TIM DEWA RUCI</h2>
+<h1 class="font-display text-4xl md:text-6xl text-white mb-6">
+UNDANGAN<br>BUKA BERSAMA
+</h1>
+<h2 class="text-xl text-[#e8c49a] mb-10 tracking-widest">
+TIM DEWA RUCI
+</h2>
 <button onclick="openInvitation()" class="btn-open px-10 py-4 rounded-full text-white font-bold text-lg shadow-lg animate-pulse-soft">
 🌙 Buka Undangan
 </button>
 </div>
 </section>
 
-<!-- ================== SECTION 2 DETAIL CARD ================== -->
-<section id="section-details" class="section-hidden min-h-screen bg-cream px-4 py-20">
-<div class="max-w-4xl mx-auto">
-<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-
-<div class="info-card rounded-2xl p-6 text-center">
-<span class="text-3xl">📍</span>
-<h3 class="font-bold mt-2">Lokasi</h3>
-<p>Cafe Dewa Ruci</p>
-</div>
-
-<div class="info-card rounded-2xl p-6 text-center">
-<span class="text-3xl">🗓️</span>
-<h3 class="font-bold mt-2">Tanggal</h3>
-<p>Sabtu, 28 Feb 2026</p>
-</div>
-
-<div class="info-card rounded-2xl p-6 text-center">
-<span class="text-3xl">🕥</span>
-<h3 class="font-bold mt-2">Waktu</h3>
-<p>16.00–19.00</p>
-</div>
-
-<div class="info-card rounded-2xl p-6 text-center">
-<span class="text-3xl">👗</span>
-<h3 class="font-bold mt-2">Dresscode</h3>
-<p>Yang terbaik</p>
-</div>
-
-</div>
-</div>
-</section>
-
-<!-- ================== SECTION 3 ISI UNDANGAN ================== -->
-<section id="section-content" class="section-hidden min-h-screen bg-night px-4 py-20">
+<!-- ================== SECTION 2 ISI UNDANGAN ================== -->
+<section id="section-content" class="section-hidden min-h-screen bg-cream px-4 py-20">
 <div class="max-w-2xl mx-auto">
 <div class="bg-white rounded-3xl p-8 shadow-2xl">
 
-<h2 class="text-2xl font-bold text-center mb-6">🌙✨ BUKBER ALERT! ✨🌙</h2>
+<h2 class="text-2xl font-bold text-center mb-6">
+🌙✨ BUKBER ALERT! ✨🌙
+</h2>
 
-<p class="text-center mb-4">Halo <span class="font-bold text-[#d4a574]">Tim Dewa Ruci</span> 🤍</p>
+<p class="text-center mb-4">
+Halo <span class="font-bold text-[#d4a574]">Tim Dewa Ruci</span> 🤍
+</p>
 
-<p class="mb-4">Perut boleh kosong, tapi kebersamaan harus penuh! 😆</p>
+<p class="mb-4">
+Perut boleh kosong, tapi kebersamaan harus penuh! 😆
+</p>
 
-<p class="mb-4">Kami resmi mengundang kalian untuk hadir di acara:</p>
+<p class="mb-4">
+Kami resmi mengundang kalian untuk hadir di acara:
+</p>
 
 <div class="bg-[#fff5eb] rounded-2xl p-6 border border-[#e8c49a]/30 mb-6">
-<p class="text-center font-bold text-lg text-[#d4a574]">🍽️ Buka Bersama</p>
+<p class="text-center font-bold text-lg text-[#d4a574]">
+🍽️ Buka Bersama
+</p>
 <p>📍 Cafe Dewa Ruci</p>
 <p>🗓️ Sabtu, 28 Februari 2026</p>
 <p>🕥 16.00–19.00</p>
@@ -141,20 +126,35 @@ background:linear-gradient(180deg,#fef9f3 0%,#fff5eb 50%,#fef9f3 100%);
 Siapkan outfit terbaik dan perut kosong maksimal karena momen ini bukan cuma soal makanan tapi juga soal tawa dan cerita 😌
 </p>
 
-<!-- DOORPRIZE -->
+<!-- 🎁 DOORPRIZE -->
 <div class="bg-[#fff5eb] rounded-2xl p-5 border border-[#e8c49a]/30 text-center">
-<p class="font-semibold text-[#d4a574] text-lg">🎁 Doorprize Menarik!</p>
-<p>Ada hadiah spesial untuk <strong>7 orang pertama</strong> yang hadir. Jangan sampai telat 😉✨</p>
+<p class="font-semibold text-[#d4a574] text-lg">
+🎁 Doorprize Menarik!
+</p>
+<p>
+Ada hadiah spesial untuk <strong>7 orang pertama</strong> yang hadir.
+Jangan sampai telat 😉✨
+</p>
 </div>
 
 </div>
 </div>
 </section>
 
-<!-- ================== SECTION 4 RUNDOWN ================== -->
-<section id="section-rundown" class="section-hidden min-h-screen bg-cream px-4 py-20">
-<div class="max-w-4xl mx-auto">
-<h2 class="text-center text-3xl font-display mb-12">🗓️ Rundown Acara</h2>
+<!-- ================== SECTION 3 RUNDOWN ================== -->
+<section id="section-rundown" class="section-hidden min-h-screen bg-night relative px-4 py-20 overflow-hidden">
+
+<!-- ⭐ Hiasan Bintang -->
+<div class="absolute inset-0 pointer-events-none">
+<div class="star w-1 h-1 top-[5%] left-[20%] animate-twinkle"></div>
+<div class="star w-1.5 h-1.5 top-[10%] left-[75%] animate-twinkle"></div>
+<div class="star w-1 h-1 top-[25%] left-[85%] animate-twinkle"></div>
+</div>
+
+<div class="relative z-10 max-w-4xl mx-auto">
+<h2 class="text-center text-3xl font-display text-white mb-12">
+🗓️ Rundown Acara
+</h2>
 
 <div class="grid md:grid-cols-2 gap-6">
 
@@ -182,16 +182,16 @@ Siapkan outfit terbaik dan perut kosong maksimal karena momen ini bukan cuma soa
 </div>
 </section>
 
-<!-- ================== SECTION 5 PENUTUP ================== -->
-<section id="section-closing" class="section-hidden min-h-screen bg-night flex flex-col items-center justify-center text-white px-4">
+<!-- ================== SECTION 4 PENUTUP ================== -->
+<section id="section-closing" class="section-hidden min-h-screen bg-cream flex flex-col items-center justify-center px-4 text-center">
 
-<p class="text-2xl font-semibold mb-6 text-center">
+<p class="text-2xl font-semibold mb-6">
 Sampai jumpa di meja takjil terbaik tahun ini 🌟
 </p>
 
-<div id="countdown" class="text-[#e8c49a] font-bold text-xl mb-6"></div>
+<div id="countdown" class="text-[#d4a574] font-bold text-xl mb-6"></div>
 
-<p class="text-center mb-10">
+<p class="mb-10">
 Kami berharap teman-teman bisa mengikuti acara ini sampai selesai yaa 🤍  
 Supaya kebersamaan kita makin hangat dan penuh cerita indah ✨
 </p>
@@ -202,18 +202,15 @@ Supaya kebersamaan kita makin hangat dan penuh cerita indah ✨
 
 </section>
 
-</div>
-
 <script>
 function openInvitation(){
-document.getElementById('section-details').classList.remove('section-hidden');
 document.getElementById('section-content').classList.remove('section-hidden');
 document.getElementById('section-rundown').classList.remove('section-hidden');
 document.getElementById('section-closing').classList.remove('section-hidden');
-document.getElementById('section-details').scrollIntoView({behavior:'smooth'});
+document.getElementById('section-content').scrollIntoView({behavior:'smooth'});
 }
 function scrollToTop(){
-document.getElementById('app-wrapper').scrollTo({top:0,behavior:'smooth'});
+window.scrollTo({top:0,behavior:'smooth'});
 }
 const targetDate=new Date("Feb 28, 2026 16:00:00").getTime();
 setInterval(()=>{
