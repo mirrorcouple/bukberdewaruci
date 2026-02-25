@@ -226,40 +226,98 @@ body { font-family: 'Nunito', sans-serif; overflow-x: hidden; }
 </section>
 
 <!-- SECTION 4 - PENUTUP -->
-<section id="section-closing" class="section-hidden min-h-screen bg-night relative px-4 py-16 md:py-20 flex flex-col items-center justify-center text-white">
-  <!-- Stars -->
+<section id="section-closing" class="section-hidden min-h-screen bg-night relative px-4 py-16 md:py-20 flex flex-col items-center justify-center overflow-hidden">
+
+  <!-- Decorative Stars -->
   <div class="absolute inset-0 overflow-hidden pointer-events-none">
-    <div class="
-      <!-- Continue from SECTION 4 - PENUTUP -->
-<div class="absolute inset-0 overflow-hidden pointer-events-none">
-    <!-- Bintang kelip -->
-    <div class="star w-1 h-1 top-[5%] left-[25%] animate-twinkle"></div>
-    <div class="star w-1 h-1 top-[15%] left-[70%] animate-twinkle delay-200"></div>
-    <div class="star w-1 h-1 top-[30%] left-[50%] animate-twinkle delay-300"></div>
-</div>
+    <div class="star w-1 h-1 top-[5%] left-[10%] animate-twinkle"></div>
+    <div class="star w-1 h-1 top-[15%] left-[30%] animate-twinkle delay-200"></div>
+    <div class="star w-1.5 h-1.5 top-[20%] left-[70%] animate-twinkle delay-300"></div>
+    <div class="star w-1 h-1 top-[35%] left-[50%] animate-twinkle delay-100"></div>
+    <div class="star w-1 h-1 top-[40%] left-[80%] animate-twinkle delay-400"></div>
+  </div>
 
-<!-- Lentera turun -->
-<div class="absolute top-0 left-1/2 transform -translate-x-1/2 animate-float delay-100">
-  <img src="lantern.png" alt="lantern" class="w-14 h-20"/>
-</div>
+  <!-- Moon -->
+  <div class="absolute top-8 right-8 animate-float">
+    <svg width="80" height="80" viewBox="0 0 100 100">
+      <defs>
+        <linearGradient id="moonGradClosing" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#ffd700"/>
+          <stop offset="100%" style="stop-color:#ffeb99"/>
+        </linearGradient>
+      </defs>
+      <path d="M50 5 C25 5 5 25 5 50 C5 75 25 95 50 95 C35 85 30 65 35 50 C40 35 55 25 50 5" fill="url(#moonGradClosing)" />
+    </svg>
+  </div>
 
-<!-- Countdown -->
-<div class="mb-8 text-center">
-  <h2 class="text-3xl font-bold mb-4">⏳ Countdown Acara</h2>
-  <div id="countdown" class="text-4xl md:text-5xl font-display tracking-widest">00 Hari 00 Jam 00 Menit 00 Detik</div>
-</div>
+  <!-- Lanterns falling -->
+  <div class="absolute top-16 left-8 animate-float-slow">
+    <svg width="40" height="60" viewBox="0 0 50 70">
+      <rect x="18" y="0" width="14" height="8" rx="2" fill="#d4a574" />
+      <ellipse cx="25" cy="35" rx="20" ry="28" fill="#e8c49a" opacity="0.9" />
+      <ellipse cx="25" cy="35" rx="15" ry="22" fill="#ffd700" opacity="0.6" />
+      <rect x="22" y="58" width="6" height="5" rx="1" fill="#d4a574" />
+    </svg>
+  </div>
+  <div class="absolute top-24 right-8 animate-float-slow delay-200">
+    <svg width="35" height="50" viewBox="0 0 50 70">
+      <rect x="18" y="0" width="14" height="8" rx="2" fill="#9db4a0" />
+      <ellipse cx="25" cy="30" rx="18" ry="25" fill="#b8d4ba" opacity="0.9" />
+      <ellipse cx="25" cy="30" rx="13" ry="20" fill="#d4e8d6" opacity="0.6" />
+      <rect x="22" y="55" width="6" height="5" rx="1" fill="#9db4a0" />
+    </svg>
+  </div>
 
-<!-- Gambar kartun lucu buka puasa -->
-<img src="cartoon-buka-puasa.png" alt="Cartoon buka puasa" class="w-64 md:w-80 mb-8 animate-float"/>
+  <div class="max-w-lg mx-auto text-center relative z-10 flex flex-col items-center gap-6">
 
-<!-- Pesan penutup -->
-<div class="bg-white/10 backdrop-blur-md rounded-3xl p-6 md:p-10 text-center max-w-2xl">
-  <p class="text-xl mb-4">Terima kasih sudah membuka undangan ini! 🌙✨</p>
-  <p class="text-lg">Kami sangat berharap <strong>semua hadir sampai acara selesai</strong> agar momen ini menjadi hangat dan meriah untuk kita semua 🤍</p>
-  <p class="mt-4 text-[#ffd700] font-semibold">🎁 Jangan lupa, doorprise untuk 7 orang pertama hadir masih menanti!</p>
-  <button onclick="scrollToTop()" class="mt-6 bg-gradient-to-r from-[#d4a574] to-[#e8c49a] px-8 py-3 rounded-full text-white font-semibold shadow-lg hover:shadow-xl transition-all hover:scale-105">
-    ⬆️ Kembali ke Atas
-  </button>
+    <!-- Countdown -->
+    <div id="countdown" class="text-white text-2xl md:text-3xl font-bold tracking-wide mb-4 animate-pulse-soft"></div>
+
+    <!-- Cartoon Image -->
+    <img src="cartoon-buka-puasa.png" alt="Kartun Buka Puasa" class="w-64 md:w-80 mx-auto animate-float mb-6" />
+
+    <!-- Closing Text -->
+    <div class="text-white text-lg md:text-xl font-semibold leading-relaxed">
+      <p>Sampai jumpa di momen buka puasa penuh kebahagiaan 🌙🍽️</p>
+      <p>Kami sangat berharap semua hadir sampai acara selesai, biar tawa dan cerita manis tidak terlewat 😄</p>
+      <p>🎁 Dooprise untuk 7 orang pertama yang hadir!</p>
+    </div>
+
+    <!-- Back to top button -->
+    <button onclick="scrollToTop()" class="mt-6 bg-gradient-to-r from-[#d4a574] to-[#e8c49a] px-8 py-3 rounded-full text-white font-semibold shadow-lg hover:shadow-xl transition-all hover:scale-105">
+      ↑ Kembali ke Atas
+    </button>
+
+  </div>
+
+</section>
+
+<style>
+@keyframes float-slow {
+  0%,100% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+}
+.animate-float-slow { animation: float-slow 4s ease-in-out infinite; }
+</style>
+
+<script>
+// Countdown
+const targetDate = new Date("Feb 28, 2026 16:00:00").getTime();
+const countdownEl = document.getElementById("countdown");
+setInterval(() => {
+  const now = new Date().getTime();
+  const dist = targetDate - now;
+  if(dist <= 0){
+    countdownEl.innerHTML = "🎉 Saatnya Buka Bersama!";
+    return;
+  }
+  const d = Math.floor(dist/(1000*60*60*24));
+  const h = Math.floor((dist%(1000*60*60*24))/(1000*60*60));
+  const m = Math.floor((dist%(1000*60*60))/(1000*60));
+  const s = Math.floor((dist%(1000*60))/1000);
+  countdownEl.innerHTML = `⏳ ${d} hari ${h} jam ${m} menit ${s} detik menuju Bukber!`;
+}, 1000);
+</script>
 </div>
 </section>
 
